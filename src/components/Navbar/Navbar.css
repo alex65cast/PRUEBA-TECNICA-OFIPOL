@@ -1,0 +1,9 @@
+.navbar{
+    height: 10vh;
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
