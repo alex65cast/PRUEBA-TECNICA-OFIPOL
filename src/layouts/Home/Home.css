@@ -8,5 +8,10 @@
 
 .homeDiv img{
     margin-top: 10em;
+    /* width: 30em; */
     
+}
+.buttonHome{
+    background-color: blue;
+    color: white;
 }
