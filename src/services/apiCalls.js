@@ -3,5 +3,20 @@ import axios from "axios";
 const urlApi = "https://pokeapi.co/api/v2/pokemon/";
 
 export const getPokemon = async()=>{
-    return await axios.get(`${urlApi}`);
+    const data = await axios.get(`${urlApi}`);
+    const pokemons = await infoPokemon(data.data.results)
+    return pokemons
 }
+
+export const getPokemonName = async(name)=>{
+    return await axios.get(`${name}`);
+}
+
+const infoPokemon = async (dataPoke) => {
+    const pokemonArray = []
+    for (let i = 0; i < dataPoke.length; i++) {
+        const pokemonDetail = await axios.get(dataPoke[i].url)
+        pokemonArray.push(pokemonDetail.data)
+    }
+    return pokemonArray;
+  }

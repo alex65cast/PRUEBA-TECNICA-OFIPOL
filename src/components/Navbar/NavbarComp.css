@@ -1,0 +1,16 @@
+.navbar{
+    height: 10vh;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.desingContainer{
+    background-color: darkblue;
+}
+.link{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

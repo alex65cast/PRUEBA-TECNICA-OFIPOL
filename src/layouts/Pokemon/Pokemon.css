@@ -3,6 +3,46 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(255, 153, 0);
-
+    max-width: 100%;
+    
 }
+
+.cardGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    /* background-color: white; */
+  }
+  .cardColumn {
+    width: 20em;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+
+  .card {
+    margin-bottom: 1em;
+  }
+  
+  .desingCardPoke{
+    width: 18em;
+    height: 37em;
+    transition: transform 0.3s ease;
+    /* background-color: rgb(238, 241, 241); */
+    
+}
+
+.desingCardPoke:hover {
+  transform: scale(1.05);
+}
+/* .desingCardAnim{
+    width: 18em;
+    height: 36em;
+    transition: transform 0.3s ease;
+    background-color: red
+    
+}
+
+.desingCardAnim:hover {
+  transform: scale(1.05);
+} */
