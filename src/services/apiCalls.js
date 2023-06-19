@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const urlApi = "https://pokeapi.co/api/v2/pokemon/";
+const urlApi = "https://pokeapi.co/api/v2/pokemon";
 
 export const getPokemon = async()=>{
     const data = await axios.get(`${urlApi}`);
@@ -9,7 +9,9 @@ export const getPokemon = async()=>{
 }
 
 export const getPokemonName = async(name)=>{
-    return await axios.get(`${name}`);
+    const data = await axios.get(`${urlApi}/${name}`);
+
+    return [data.data]
 }
 
 const infoPokemon = async (dataPoke) => {
