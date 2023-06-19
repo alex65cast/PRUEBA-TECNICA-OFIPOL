@@ -14,13 +14,11 @@ export const NavbarComp = () => {
   return (
 <>
 <div className='headerDesing'>
-    {['xl'].map((expand) => (
-        <Navbar key={expand} expand={expand} className=" mb-3 desingContainer">
+        <Navbar className=" mb-3 desingContainer">
           <Container fluid>
-            <Navbar className='link'>POKE API</Navbar>
+            <Navbar className='link'  onClick={()=>navigate("/")}>POKE API</Navbar>
           </Container>
         </Navbar>
-      ))}
 </div>
 </>
     )
