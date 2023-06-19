@@ -1,0 +1,8 @@
+.pokemonDesing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 153, 0);
+
+}
