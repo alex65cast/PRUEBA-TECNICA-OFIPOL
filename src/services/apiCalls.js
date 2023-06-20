@@ -21,4 +21,10 @@ const infoPokemon = async (dataPoke) => {
         pokemonArray.push(pokemonDetail.data)
     }
     return pokemonArray;
-  }
+
+}
+
+export const getMeal = async()=>{
+    const data = await axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
+    return data.data.meals[0]
+}
