@@ -80,10 +80,11 @@ export const Pokemon = () => {
               <Card.Img variant="top" src={pokemons.sprites.front_default} />
               <Card.Body>
                 <Card.Title>Name: {pokemons.name}</Card.Title>
+                <Card.Title>Type: </Card.Title>
                 {pokemons.types.map((typ) => (
-                  <Card.Title key={typ.type.name}>
-                    Type: {typ.type.name}
-                  </Card.Title>
+                  <p key={typ.type.name}>
+                    -{typ.type.name}
+                  </p>
                 ))}
               </Card.Body>
             </Card>
