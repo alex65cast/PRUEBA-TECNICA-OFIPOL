@@ -5,6 +5,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { addCharacter } from "../detailSlice";
 import { useNavigate } from "react-router-dom";
+import logoPokeball from "../../../public/pokeball.png"
 
 export const Pokemon = () => {
   const [dataPokemon, setDataPokemon] = useState([]);
@@ -16,10 +17,6 @@ export const Pokemon = () => {
     setBringPokemon(e.target.value);
   };
 
-  useEffect(() => {
-    console.log(bringPokemon, "haaaj");
-  });
-
   const selectedPokemon = (poke) =>{
     console.log(poke,"Pokemon escogido");
     dispatch(addCharacter(poke));
@@ -30,7 +27,6 @@ export const Pokemon = () => {
     getPokemon()
       .then((pokeData) => {
         setDataPokemon(pokeData);
-        console.log(pokeData, "Soy pokedata");
       })
       .catch((error) => console.log(error));
   }, []);
@@ -40,14 +36,12 @@ export const Pokemon = () => {
       getPokemonName(bringPokemon)
         .then((pokeData) => {
           setDataPokemon(pokeData);
-          console.log(pokeData, "Soy pokedata2");
         })
         .catch((error) => console.log(error));
     } else {
       getPokemon()
         .then((pokeData) => {
           setDataPokemon(pokeData);
-          console.log(pokeData, "Soy pokedata");
         })
         .catch((error) => console.log(error));
     }
@@ -65,11 +59,11 @@ export const Pokemon = () => {
               placeholder="Search pokemon.."
               onChange={(e) => inputHandler(e)}
             />
-            {/* <img
+            <img
                 className="buscarIcon"
-                src={buscarIcon}
+                src={logoPokeball}
                 alt="buscarImagen"
-              ></img> */}
+              ></img>
           </Col>
         </Row>
       </Container>

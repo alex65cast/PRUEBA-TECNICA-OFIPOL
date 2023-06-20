@@ -11,14 +11,11 @@ export const DetailPoke = () => {
   const detailPokeRdx = useSelector(detailData);
   const [bringMeal, setBringMeal] = useState({});
   const navigate = useNavigate();
-  useEffect(() => {
-    console.log(bringMeal, "SJSJSJSJSJ");
-  }, []);
+
 
   useEffect(() => {
     getMeal()
       .then((result) => {
-        console.log(result, "COMIDA");
         setBringMeal(result);
       })
       .catch((error) => {

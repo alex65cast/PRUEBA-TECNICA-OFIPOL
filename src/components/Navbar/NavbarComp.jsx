@@ -1,25 +1,20 @@
-import React from 'react'
-import "./NavbarComp.css"
-import { useNavigate } from 'react-router-dom'
-import Button from 'react-bootstrap/Button';
+import React from 'react';
+import './NavbarComp.css';
+import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import logoApi from '../../../public/pokeapi.png';
 
 export const NavbarComp = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
+
   return (
-<>
-<div className='headerDesing'>
-        <Navbar className=" mb-3 desingContainer">
-          <Container fluid>
-            <Navbar className='link'  onClick={()=>navigate("/")}>POKE API</Navbar>
-          </Container>
-        </Navbar>
-</div>
-</>
-    )
-}
+    <div className="headerDesing">
+      <Navbar className="mb-3 desingContainer link" onClick={() => navigate('/')}>
+        <Container fluid>
+          <img src={logoApi} alt="logoApi" />
+        </Container>
+      </Navbar>
+    </div>
+  );
+};
