@@ -1,19 +1,19 @@
 
 import { createSlice } from '@reduxjs/toolkit';
 
-export const userSlice = createSlice({
-    name: 'user',
+export const detailSlice = createSlice({
+    name: 'detail',
     initialState: {
-      credentials: {}
+      data: {}
     },
     reducers: {
-      login: (state, action) => {
+      addCharacter: (state, action) => {
         return {
           ...state,
           ...action.payload
         }
       },
-      logout: (state, action) => {
+      cleanCharacter: (state, action) => {
         return {
           ...state,
           ...action.payload
@@ -27,10 +27,10 @@ export const userSlice = createSlice({
 //exporto las ACCIONES.....
 
 //Exporto las acciones para el modo ESCRITURA
-export const { login, logout } = userSlice.actions;
+export const { addCharacter, cleanCharacter } = detailSlice.actions;
 
 
 //exporto el método para el modo LECTURA
-export const userData = (state) => state.user;
+export const detailData = (state) => state.detail;
 
-export default userSlice.reducer;
+export default detailSlice.reducer;
